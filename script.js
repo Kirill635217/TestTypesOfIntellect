@@ -403,11 +403,11 @@ $(function() {
         var brainymo = new BRAINYMO.Game({
             cards: [
                 {
-                    backImg: './Assets/4.1.png',
+                    backTxt: ("Я лгу очень убедительно"),
                     connectionID: 1
                 },
                 {
-                    backImg: './Assets/7.png',
+                    backTxt: ('У меня дома много фотографий и картин'),
                     connectionID: 1
                 },
                 {
