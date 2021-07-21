@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="Разтянул карты, изменил bg-color, цвет текста">
+    <list default="true" id="f425c073-de86-4146-ab4a-31a8b9b40e86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/index.html" />
-      <option value="$PROJECT_DIR$/style.css" />
-    </changedPaths>
-  </component>
-  <component name="ProjectId" id="1vcUMupR4X2I5iajnOUGBokAA58" />
+  <component name="ProjectId" id="1vcTI7UQdtoEnO63OvTZmDaDVmj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,31 +35,52 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="" />
-      <created>1626860846067</created>
+      <changelist id="f425c073-de86-4146-ab4a-31a8b9b40e86" name="Default Changelist" comment="" />
+      <created>1626860305722</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1626860846067</updated>
-      <workItem from="1626860876627" duration="7866000" />
+      <updated>1626860305722</updated>
+      <workItem from="1626860423021" duration="3382000" />
     </task>
-    <task id="LOCAL-00001" summary="Разтянул карты, изменил bg-color, цвет текста">
-      <created>1626865404902</created>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1626860696943</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1626865404905</updated>
+      <updated>1626860696944</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commented out unwanted code. Cards now dont flip and text (point and timer) has been removed">
+      <created>1626862168802</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626862168802</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added button to cards">
+      <created>1626862624221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626862624221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -71,12 +95,25 @@
       </map>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Разтянул карты, изменил bg-color, цвет текста" />
-    <option name="LAST_COMMIT_MESSAGE" value="Разтянул карты, изменил bg-color, цвет текста" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Commented out unwanted code. Cards now dont flip and text (point and timer) has been removed" />
+    <MESSAGE value="Added button to cards" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added button to cards" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="50" width="1103" height="580" key="MergeDialog" timestamp="1626865495869">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="50" width="1103" height="580" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1626865495869" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1626862628015">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626862628015" />
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626876712075">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1626876712075" />
   </component>
 </project>

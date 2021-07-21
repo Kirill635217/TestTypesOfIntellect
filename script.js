@@ -1,4 +1,7 @@
 var BRAINYMO = BRAINYMO || {};
+var generatedCards = new Array(16);
+var buttons;
+var clickedTimes = 0;
 
 BRAINYMO.Game = (function() {
   
@@ -112,6 +115,8 @@ BRAINYMO.Game = (function() {
             // timer = new BRAINYMO.Timer();
             storage = new BRAINYMO.Storage();
             numOfCards = config.cards.length;
+            console.log(generatedCards[1]);
+            console.log(generatedCards);
             // storage.setBestTime(null);
             // card.attachCardEvent(handleCardClick, config);
         };
@@ -119,11 +124,43 @@ BRAINYMO.Game = (function() {
         /**
          * After game initialization call this method in order to generate cards
          */
-        this.generateCardSet = function() {
+        this.generateCardSet = function() 
+        {
             // Generate new card set
             card.generateCards(config.cards);
             // Reset active cards array
             activeCards = [];
+            var cards = document.getElementsByClassName("front");
+            if(cards.length === 16){
+            for (var i = 0, len = cards.length; i < len; i++) {
+                console.log(i);
+                generatedCards[i] = cards[i];
+                console.log(generatedCards[i]);
+            }
+            buttons = document.getElementsByClassName("button-1");
+            console.log(buttons.length);
+            // var j = 0;
+            // buttons[0].onclick = function(){
+            //     console.log("here");
+            //     if(j < buttons.length){
+            //         buttons[j+1].scrollIntoView();
+            //         console.log("clicked " + buttons[j] + " " + j);}
+            //         j++;
+            // }
+            for (var i = 0, len = buttons.length; i < len; i++) {
+                console.log(buttons[i]);
+                buttons[i].textContent === i + "";
+                // buttons[i].onclick = clicked(i);
+                    // if(i == 0)
+                    // {
+                    //     console.log("clicked " + buttons[i] + " " + i);
+                    //     buttons[1].scrollIntoView();
+                    // }else{
+                    //     console.log(i);
+                    //     buttons[17-i].scrollIntoView();
+                    // }
+                }
+        }
             // if(document.getElementById("btn-start").textContent==="Заново"){
             //     refreshPage();}
             // Reset timer
@@ -136,6 +173,29 @@ BRAINYMO.Game = (function() {
     }
 
 })();
+
+function clicked(){
+    console.log(clickedTimes);
+    if(clickedTimes+1 < buttons.length){
+        buttons[clickedTimes+1].scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+        clickedTimes++;
+    }else if(clickedTimes+1 == buttons.length){
+        buttons[0].scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+        clickedTimes = 0;
+    }
+}
+// function onClicked(){
+//     buttons[0].scrollIntoView();
+// }
+
 function hideShow (){
     document.getElementById('rick').classList.toggle('hideShow')
 }
@@ -404,5 +464,4 @@ $(function() {
             brainymo.generateCardSet();
             $(this).text('Заново');
         });
-
     });
