@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="">
+    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="Разтянул карты, изменил bg-color, цвет текста">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +17,7 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
+      <option value="$PROJECT_DIR$/index.html" />
       <option value="$PROJECT_DIR$/style.css" />
     </changedPaths>
   </component>
@@ -41,8 +43,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626860846067</updated>
-      <workItem from="1626860876627" duration="3675000" />
+      <workItem from="1626860876627" duration="7866000" />
     </task>
+    <task id="LOCAL-00001" summary="Разтянул карты, изменил bg-color, цвет текста">
+      <created>1626865404902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626865404905</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,5 +76,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Разтянул карты, изменил bg-color, цвет текста" />
+    <option name="LAST_COMMIT_MESSAGE" value="Разтянул карты, изменил bg-color, цвет текста" />
   </component>
 </project>
