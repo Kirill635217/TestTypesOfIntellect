@@ -2,6 +2,8 @@ var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
 var buttons;
 var clickedTimes = 0;
+// 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
+var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
 
 BRAINYMO.Game = (function() {
   
@@ -149,7 +151,8 @@ BRAINYMO.Game = (function() {
             // }
             for (var i = 0, len = buttons.length; i < len; i++) {
                 console.log(buttons[i]);
-                buttons[i].textContent === i + "";
+                if(i != 0)
+                    buttons[i].classList.toggle('hideShow');
                 // buttons[i].onclick = clicked(i);
                     // if(i == 0)
                     // {
@@ -174,23 +177,29 @@ BRAINYMO.Game = (function() {
 
 })();
 
-function clicked(){
+function clicked(button, intelligence, points){
     console.log(clickedTimes);
     if(clickedTimes+1 < buttons.length){
+        buttons[clickedTimes+1].classList.toggle('hideShow');
         buttons[clickedTimes+1].scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
+        button.classList.toggle('hideShow')
         clickedTimes++;
     }else if(clickedTimes+1 == buttons.length){
+        buttons[0].classList.toggle('hideShow');
         buttons[0].scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
+        button.classList.toggle('hideShow');
         clickedTimes = 0;
     }
+    typesOfintelligence[intelligence] += points;
+    console.log(typesOfintelligence[intelligence]);
 }
 // function onClicked(){
 //     buttons[0].scrollIntoView();
