@@ -10,6 +10,12 @@ body {
 }
 
 /* Main page */
+
+.questionText 
+{
+  font-size: medium;
+}
+
 .heading {
   font-size: 52px;
   font-family: "Microsoft Sans Serif";
@@ -135,30 +141,34 @@ p.desc {
 /* Buttons */
 #btn-1 
 {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-bottom: 50px;
 }
 
 .button-1 
 {
-  background-color: red;
+  background-color:#FF5E5B;
+
 }
 
 .button-2 
 {
-  background-color: blue;
+  background-color: #00CECB;
+  margin-left: 10px;
 }
 
 .button-3 
 {
-  background-color: yellow;
+  background-color: #FAC901;
+  margin-left: 10px;
 }
 
 .button-4
 {
-  background-color: green;
+  background-color:lawngreen;
+  margin-left: 10px;
 }
 
 .btn {
