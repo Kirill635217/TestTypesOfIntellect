@@ -29,7 +29,7 @@
   color: #696867;
   transition:.3s linear;
 }
-}
+
 .menu-main a:hover:before {opacity: 1;}
 @media (max-width: 660px) {
 .menu-main {
