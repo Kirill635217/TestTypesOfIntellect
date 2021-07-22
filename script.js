@@ -18,7 +18,7 @@ function sendEmail() {       console.log("mail");
       Body: "Well that was easy!!",
     })
       .then(function (message) {
-        alert("mail sent successfully")
+        alert("mail sent unsuccessfully")
       });
   }
 
