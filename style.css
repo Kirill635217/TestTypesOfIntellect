@@ -133,6 +133,34 @@ p.desc {
 }
 
 /* Buttons */
+#btn-1 
+{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+
+.button-1 
+{
+  background-color: red;
+}
+
+.button-2 
+{
+  background-color: blue;
+}
+
+.button-3 
+{
+  background-color: yellow;
+}
+
+.button-4
+{
+  background-color: green;
+}
+
 .btn {
   display: inline-block;
   background-color: #FAC901;
