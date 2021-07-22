@@ -430,7 +430,7 @@ $(function() {
                     connectionID: 2
                 },
                 {
-                    backTxt: './Assets/6.png',
+                    backTxt: 'text goes here',
                     connectionID: 3
                 },
                 {

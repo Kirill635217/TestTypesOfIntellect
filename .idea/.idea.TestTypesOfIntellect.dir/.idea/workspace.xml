@@ -10,8 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="f425c073-de86-4146-ab4a-31a8b9b40e86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
@@ -23,11 +23,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <changedPaths>
-      <option value="$PROJECT_DIR$/script.js" />
-    </changedPaths>
   </component>
   <component name="ProjectId" id="1vcTI7UQdtoEnO63OvTZmDaDVmj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -58,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626860305722</updated>
-      <workItem from="1626860423021" duration="3382000" />
+      <workItem from="1626860423021" duration="6249000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1626860696943</created>
@@ -81,7 +76,21 @@
       <option name="project" value="LOCAL" />
       <updated>1626862624221</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added scrolling to next question">
+      <created>1626876802727</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626876802728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added types of intelligence and points can now be added to each one">
+      <created>1626878910455</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626878910455</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +114,22 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Commented out unwanted code. Cards now dont flip and text (point and timer) has been removed" />
     <MESSAGE value="Added button to cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added button to cards" />
+    <MESSAGE value="Added scrolling to next question" />
+    <MESSAGE value="Added types of intelligence and points can now be added to each one" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added types of intelligence and points can now be added to each one" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="50" width="1103" height="580" key="MergeDialog" timestamp="1626885992971">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="50" width="1103" height="580" key="MergeDialog/0.0.1280.680@0.0.1280.680" timestamp="1626885992971" />
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2" timestamp="1626878923762">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="73" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1626878923762" />
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626885970750">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="451" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1626885970750" />
   </component>
 </project>
