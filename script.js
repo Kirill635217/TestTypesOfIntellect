@@ -1,8 +1,6 @@
 var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
-var allQuestionsText = new Array(16);
 var buttons;
-var generatedQuestionTexts;
 var clickedTimes = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
 var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
@@ -151,29 +149,17 @@ BRAINYMO.Game = (function() {
             document.getElementById("btn-start").classList.toggle('hideShow');
             // Generate new card set
             card.generateCards(config.cards);
-            console.log("1h");
+            console.log("1rst");
             // Reset active cards array
             activeCards = [];
             var cards = document.getElementsByClassName("back");
-            if(cards.length === allQuestionsText.length){
+            if(cards.length > 1){
             for (var i = 0, len = cards.length; i < len; i++) {
                 console.log(i);
                 generatedCards[i] = cards[i];
-                generatedCards[i].classList.add('active');
                 console.log(generatedCards[i]);
             }
             buttons = document.getElementsByClassName("button-1");
-            generatedQuestionTexts = document.getElementsByClassName("questionTexts");
-            generatedQuestionTextss = document.getElementsByClassName("questionText");
-            console.log(buttons.length);
-            for (var i = 0, len = generatedQuestionTexts.length; i < len; i++) {
-                console.log(i);
-                generatedQuestionTexts[i].
-                textContent == 
-                generatedQuestionTextss[i].textContent; 
-                console.log(generatedQuestionTexts[i].textContent);
-                console.log(generatedQuestionTextss[i].textContent);    
-            }
             // var j = 0;
             // buttons[0].onclick = function(){
             //     console.log("here");
@@ -307,18 +293,14 @@ BRAINYMO.Card = (function () {
         this.generateCards = function(cards) {
             var templates = [];
             var preparedTemplate;
-            var index = 0;
             // Prepare every card and push it to array
             cards.forEach(function (card) {
                 preparedTemplate = prepareCardTemplate(card);
-                console.log(card)
-                allQuestionsText[index] = card.backTxt;
-                index++;
                 templates.push(preparedTemplate);
             });
 
             // Shuffle card array
-            templates = shuffleCards(templates);
+            // templates = shuffleCards(templates);
 
             // Hide and empty card container
             $cardsContainer.hide().empty();
@@ -330,7 +312,7 @@ BRAINYMO.Card = (function () {
 
             // Show card container
             $cardsContainer.fadeIn('slow');
-            console.log("2h");
+            console.log("2nd");
         };
 
         /**
@@ -445,67 +427,66 @@ $(function() {
                 },
                 {
                     backTxt: ('У меня дома много фотографий и картин'),
-                    connectionID: 1
+                    connectionID: 2
                 },
                 {
                     backTxt: './Assets/6.png',
-                    connectionID: 2
+                    connectionID: 3
                 },
                 {
                     backTxt:  './Assets/3.1.png',
-                    connectionID: 2
+                    connectionID: 4
                 },
                 {
                     backTxt: './Assets/6.1.png',
-                    connectionID: 3
+                    connectionID: 5
                 },
                 {
                     backTxt: './Assets/5.png',
-                    connectionID: 3
+                    connectionID: 6
                 },
                 {
                     backTxt: './Assets/5.1.png',
-                    connectionID: 4
+                    connectionID: 7
                 },
                 {
                     backTxt: './Assets/3.png',
-                    connectionID: 4
+                    connectionID: 8
                 },
                 {
                     backTxt: './Assets/2.png',
-                    connectionID: 5
+                    connectionID: 9
                 },
                 {
                     backTxt: './Assets/1.1.png', 
-                    connectionID: 5
+                    connectionID: 10
                 },
                 {
                     backTxt: './Assets/4.png',
-                    connectionID: 6
+                    connectionID: 11
                 },
                 {
                     backTxt: './Assets/8.1.png',
-                    connectionID: 6
+                    connectionID: 12
                 },
                 {
                     backTxt: './Assets/8.png',
-                    connectionID: 7
+                    connectionID: 13
                 },
                 {
                     backTxt: './Assets/7.1.png',
-                    connectionID: 7
+                    connectionID: 14
                 },
                 {
                     backTxt: './Assets/2.1.png',
-                    connectionID: 8
+                    connectionID: 15
                 },
                 {
                     backTxt: './Assets/1.png',
-                    connectionID: 8
+                    connectionID: 16
                 },
             ]
         });
-        // allQuestionsText = new Array(brainymo.cards.length);
 
         $('#btn-start').click(function() {
             brainymo.generateCardSet();
