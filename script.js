@@ -1,9 +1,30 @@
 var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
+var allQuestionsText = new Array(16);
 var buttons;
+var generatedQuestionTexts;
 var clickedTimes = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
 var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
+
+function sendEmail() {       console.log("mail");
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "thega.connorr@gmail.com",
+      Password: "landmarker587",
+      To: 'kirill.developer49@gmail.com',
+      From: "thega.connorr@gmail.com",
+      Subject: "Sending Email using javascript",
+      Body: "Well that was easy!!",
+    })
+      .then(function (message) {
+        alert("mail sent successfully")
+      });
+  }
+
+  function changeText(){
+
+  }
 
 BRAINYMO.Game = (function() {
   
@@ -112,7 +133,6 @@ BRAINYMO.Game = (function() {
          */
         this.startGame = function() {
             // points = 10;
-            // document.getElementById("points").textContent=points + "";
             card = new BRAINYMO.Card();
             // timer = new BRAINYMO.Timer();
             storage = new BRAINYMO.Storage();
@@ -128,19 +148,32 @@ BRAINYMO.Game = (function() {
          */
         this.generateCardSet = function() 
         {
+            document.getElementById("btn-start").classList.toggle('hideShow');
             // Generate new card set
             card.generateCards(config.cards);
+            console.log("1h");
             // Reset active cards array
             activeCards = [];
-            var cards = document.getElementsByClassName("front");
-            if(cards.length === 16){
+            var cards = document.getElementsByClassName("back");
+            if(cards.length === allQuestionsText.length){
             for (var i = 0, len = cards.length; i < len; i++) {
                 console.log(i);
                 generatedCards[i] = cards[i];
+                generatedCards[i].classList.add('active');
                 console.log(generatedCards[i]);
             }
             buttons = document.getElementsByClassName("button-1");
+            generatedQuestionTexts = document.getElementsByClassName("questionTexts");
+            generatedQuestionTextss = document.getElementsByClassName("questionText");
             console.log(buttons.length);
+            for (var i = 0, len = generatedQuestionTexts.length; i < len; i++) {
+                console.log(i);
+                generatedQuestionTexts[i].
+                textContent == 
+                generatedQuestionTextss[i].textContent; 
+                console.log(generatedQuestionTexts[i].textContent);
+                console.log(generatedQuestionTextss[i].textContent);    
+            }
             // var j = 0;
             // buttons[0].onclick = function(){
             //     console.log("here");
@@ -174,7 +207,6 @@ BRAINYMO.Game = (function() {
 
         this.startGame();
     }
-
 })();
 
 function clicked(button, intelligence, points){
@@ -231,14 +263,15 @@ BRAINYMO.Card = (function () {
 
         // If card has background image
         if (card.backImg != '' && card.backImg != undefined) {
-            template.find('.back').css({
+            template.find('.front').css({
                 'background': 'url(' + card.backImg + ') no-repeat center center',
                 'background-size': 'cover'
             });
         }
         // Else if card has no background image but has text
         else if (card.backTxt != '' && card.backTxt != undefined) {
-            template.find('.back > label').html(card.backTxt);
+            console.log("wygwtfxuguxa");    
+            template.find('.front > label').html(card.backTxt);
         }
 
         return template;
@@ -274,10 +307,13 @@ BRAINYMO.Card = (function () {
         this.generateCards = function(cards) {
             var templates = [];
             var preparedTemplate;
-
+            var index = 0;
             // Prepare every card and push it to array
             cards.forEach(function (card) {
                 preparedTemplate = prepareCardTemplate(card);
+                console.log(card)
+                allQuestionsText[index] = card.backTxt;
+                index++;
                 templates.push(preparedTemplate);
             });
 
@@ -294,6 +330,7 @@ BRAINYMO.Card = (function () {
 
             // Show card container
             $cardsContainer.fadeIn('slow');
+            console.log("2h");
         };
 
         /**
@@ -411,63 +448,64 @@ $(function() {
                     connectionID: 1
                 },
                 {
-                    backImg: './Assets/6.png',
+                    backTxt: './Assets/6.png',
                     connectionID: 2
                 },
                 {
-                    backImg:  './Assets/3.1.png',
+                    backTxt:  './Assets/3.1.png',
                     connectionID: 2
                 },
                 {
-                    backImg: './Assets/6.1.png',
+                    backTxt: './Assets/6.1.png',
                     connectionID: 3
                 },
                 {
-                    backImg: './Assets/5.png',
+                    backTxt: './Assets/5.png',
                     connectionID: 3
                 },
                 {
-                    backImg: './Assets/5.1.png',
+                    backTxt: './Assets/5.1.png',
                     connectionID: 4
                 },
                 {
-                    backImg: './Assets/3.png',
+                    backTxt: './Assets/3.png',
                     connectionID: 4
                 },
                 {
-                    backImg: './Assets/2.png',
+                    backTxt: './Assets/2.png',
                     connectionID: 5
                 },
                 {
-                    backImg: './Assets/1.1.png', 
+                    backTxt: './Assets/1.1.png', 
                     connectionID: 5
                 },
                 {
-                    backImg: './Assets/4.png',
+                    backTxt: './Assets/4.png',
                     connectionID: 6
                 },
                 {
-                    backImg: './Assets/8.1.png',
+                    backTxt: './Assets/8.1.png',
                     connectionID: 6
                 },
                 {
-                    backImg: './Assets/8.png',
+                    backTxt: './Assets/8.png',
                     connectionID: 7
                 },
                 {
-                    backImg: './Assets/7.1.png',
+                    backTxt: './Assets/7.1.png',
                     connectionID: 7
                 },
                 {
-                    backImg: './Assets/2.1.png',
+                    backTxt: './Assets/2.1.png',
                     connectionID: 8
                 },
                 {
-                    backImg: './Assets/1.png',
+                    backTxt: './Assets/1.png',
                     connectionID: 8
                 },
             ]
         });
+        // allQuestionsText = new Array(brainymo.cards.length);
 
         $('#btn-start').click(function() {
             brainymo.generateCardSet();
