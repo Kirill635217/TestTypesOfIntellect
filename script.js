@@ -1,5 +1,6 @@
 var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
+var generatedCardsBrain;
 var buttons;
 var clickedTimes = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
@@ -132,6 +133,11 @@ BRAINYMO.Game = (function() {
         this.startGame = function() {
             // points = 10;
             card = new BRAINYMO.Card();
+            generatedCardsBrain = new Array(config.cards.length);
+            for (var i = 0, len = generatedCardsBrain.length; i < len; i++) {
+                generatedCardsBrain[i] = config.cards[i];
+                console.log("added " + config.cards[i] + " #" + i);
+            }
             // timer = new BRAINYMO.Timer();
             storage = new BRAINYMO.Storage();
             numOfCards = config.cards.length;
@@ -194,7 +200,7 @@ BRAINYMO.Game = (function() {
     }
 })();
 
-function clicked(button, intelligence, points){
+function clicked(button, points){
     console.log(button);
     console.log(buttons[1]);
     let str = button.id;
@@ -215,8 +221,12 @@ function clicked(button, intelligence, points){
             inline: 'center'
         });
     }
-    typesOfintelligence[intelligence] += points;
-    console.log(typesOfintelligence[intelligence]);
+    console.log(generatedCards[generatedCards.length-1] + " " + generatedCards.length);
+    typesOfintelligence[generatedCardsBrain[index].connectionID] += points;
+    for (var i = 0, len = typesOfintelligence.length; i < len; i++) {
+        console.log(typesOfintelligence[i]);
+    }
+    console.log(typesOfintelligence[generatedCardsBrain[index].connectionID] + " " + points + " " + generatedCardsBrain[index].connectionID);
 }
 // function onClicked(){
 //     buttons[0].scrollIntoView();
