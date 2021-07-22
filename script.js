@@ -159,7 +159,7 @@ BRAINYMO.Game = (function() {
                 generatedCards[i] = cards[i];
                 console.log(generatedCards[i]);
             }
-            buttons = document.getElementsByClassName("button-1");
+            buttons = document.getElementsByClassName("buttonContainer");
             // var j = 0;
             // buttons[0].onclick = function(){
             //     console.log("here");
@@ -169,9 +169,8 @@ BRAINYMO.Game = (function() {
             //         j++;
             // }
             for (var i = 0, len = buttons.length; i < len; i++) {
+                buttons[i].id = "btnContainer" + i;
                 console.log(buttons[i]);
-                if(i != 0)
-                    buttons[i].classList.toggle('hideShow');
                 // buttons[i].onclick = clicked(i);
                     // if(i == 0)
                     // {
@@ -196,25 +195,25 @@ BRAINYMO.Game = (function() {
 })();
 
 function clicked(button, intelligence, points){
-    console.log(clickedTimes);
-    if(clickedTimes+1 < buttons.length){
-        buttons[clickedTimes+1].classList.toggle('hideShow');
-        buttons[clickedTimes+1].scrollIntoView({
+    console.log(button);
+    console.log(buttons[1]);
+    let str = button.id;
+    var index = parseInt(str.replace("btnContainer", ""), 10);    
+    console.log(index);
+    if(index+1 < buttons.length){
+        var child = buttons[index+1].firstElementChild;
+        child.scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
-        button.classList.toggle('hideShow')
-        clickedTimes++;
-    }else if(clickedTimes+1 == buttons.length){
-        buttons[0].classList.toggle('hideShow');
-        buttons[0].scrollIntoView({
+    }else{
+        var child = buttons[0].firstElementChild;
+        child.scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
-        button.classList.toggle('hideShow');
-        clickedTimes = 0;
     }
     typesOfintelligence[intelligence] += points;
     console.log(typesOfintelligence[intelligence]);
@@ -423,7 +422,7 @@ $(function() {
             cards: [
                 {
                     backTxt: ("Я лгу очень убедительно"),
-                    connectionID: 1
+                    connectionID: 2
                 },
                 {
                     backTxt: ('У меня дома много фотографий и картин'),
