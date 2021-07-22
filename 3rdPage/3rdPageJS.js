@@ -27,15 +27,18 @@ function drawChart() {
 
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7]
+        ['Лінгвістичний', ling],
+        ['Логіко-математичний', logi],
+        ['Музичний', musi],
+        ['Кінестетичний', kine],
+        ['Візуально-просторовий', visu],
+        ['Міжособистісний', mizh],
+        ['Внутрішньоособистісний', vnut],
+        ['Природничий', prir]
     ]);
 
     var options = {
-        title: 'My Daily Activities'
+        title: 'Види інтелекту'
     };
 
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
