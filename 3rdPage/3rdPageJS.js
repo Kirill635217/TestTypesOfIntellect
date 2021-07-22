@@ -20,39 +20,25 @@ window.onload=function () {
     document.getElementById('prir').innerHTML = prir;
 }
 
-google.charts.load('current', {packages: ['corechart', 'bar']});
-google.charts.setOnLoadCallback(drawBasic);
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
-function drawBasic() {
-
-    var data = new google.visualization.DataTable();
-    data.addColumn('timeofday', 'Time of Day');
-    data.addColumn('number', 'Motivation Level');
+function drawChart() {
 
     var data = google.visualization.arrayToDataTable([
-        ['Element', 'Density', { role: 'style' }],
-        ['Лингвистический', ling, '#b87333'],            // RGB value
-                                                
-
-]);
+        ['Task', 'Hours per Day'],
+        ['Work', 11],
+        ['Eat', 2],
+        ['Commute', 2],
+        ['Watch TV', 2],
+        ['Sleep', 7]
+    ]);
 
     var options = {
-        title: 'Motivation Level Throughout the Day',
-        hAxis: {
-            title: 'Time of Day',
-            format: 'h:mm a',
-            viewWindow: {
-                min: [7, 30, 0],
-                max: [17, 30, 0]
-            }
-        },
-        vAxis: {
-            title: 'Rating (scale of 1-10)'
-        }
+        title: 'My Daily Activities'
     };
 
-    var chart = new google.visualization.ColumnChart(
-        document.getElementById('chart_div'));
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
     chart.draw(data, options);
 }
