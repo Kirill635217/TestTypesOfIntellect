@@ -3,7 +3,7 @@ var generatedCards = new Array(16);
 var generatedCardsBrain;
 var generatedQuestionsTexts;
 var buttons;
-var clickedTimes = 0;
+var questionRoundsCompleted = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
 var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
 
@@ -20,10 +20,6 @@ function sendEmail() {       console.log("mail");
       .then(function (message) {
         alert("mail sent unsuccessfully")
       });
-  }
-
-  function changeText(){
-
   }
 
 BRAINYMO.Game = (function() {
@@ -155,7 +151,12 @@ BRAINYMO.Game = (function() {
         {
             document.getElementById("btn-start").classList.toggle('hideShow');
             // Generate new card set
-            card.generateCards(config.cards);
+            var cardsToGenerate = new Array(10);
+            for (var i = 0, len = cardsToGenerate.length; i < len; i++) {
+                cardsToGenerate[i] = config.cards[i];
+            }
+            card.generateCards(cardsToGenerate);
+            console.log(cardsToGenerate);
             console.log("1rst");
             // Reset active cards array
             activeCards = [];
@@ -223,6 +224,8 @@ function clicked(button, points){
             block: 'center',
             inline: 'center'
         });
+        questionRoundsCompleted++;
+        nextQuestionRound();
     }
     console.log(generatedCards[generatedCards.length-1] + " " + generatedCards.length);
     typesOfintelligence[generatedCardsBrain[index].connectionID] += points;
@@ -230,6 +233,14 @@ function clicked(button, points){
         console.log(typesOfintelligence[i]);
     }
     console.log(typesOfintelligence[generatedCardsBrain[index].connectionID] + " " + points + " " + generatedCardsBrain[index].connectionID);
+}
+
+function nextQuestionRound(){
+    if(questionRoundsCompleted * 10 < generatedCardsBrain.length){
+        for (var i = questionRoundsCompleted * 10 + 1, len = questionRoundsCompleted * 10 + 10; i < len; i++) {
+            prepareCardTemplate(generatedCardsBrain[i]);
+        }
+    }
 }
 // function onClicked(){
 //     buttons[0].scrollIntoView();
@@ -493,6 +504,22 @@ $(function() {
                 {
                     backTxt: './Assets/2.1.png',
                     connectionID: 15
+                },
+                {
+                    backTxt: './Assets/1.png',
+                    connectionID: 16
+                },
+                {
+                    backTxt: './Assets/1.png',
+                    connectionID: 16
+                },
+                {
+                    backTxt: './Assets/1.png',
+                    connectionID: 16
+                },
+                {
+                    backTxt: './Assets/1.png',
+                    connectionID: 16
                 },
                 {
                     backTxt: './Assets/1.png',
