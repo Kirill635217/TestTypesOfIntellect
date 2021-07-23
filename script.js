@@ -438,7 +438,7 @@ BRAINYMO.Storage = (function() {
     }
 })();
 
-
+// 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
 
 // Game init
 $(function() {
@@ -446,67 +446,67 @@ $(function() {
         var brainymo = new BRAINYMO.Game({
             cards: [
                 {
-                    backTxt: ("Я лгу очень убедительно"),
+                    backTxt: ('Мені подобається більше дізнаватися про себе'),
                     connectionID: 2
                 },
                 {
-                    backTxt: ('У меня дома много фотографий и картин'),
+                    backTxt: ('Я вмію грати на музичному інструменті'),
                     connectionID: 2
                 },
-                {
-                    backTxt: 'text goes here',
+                {  
+                    backTxt: ('Я набагато легше вирішую проблеми, коли в цей час щось роблю'),
                     connectionID: 3
                 },
                 {
-                    backTxt:  './Assets/3.1.png',
+                    backTxt:  ('Мені часто приходить на розум пісня або мелодія'),
                     connectionID: 4
                 },
                 {
-                    backTxt: './Assets/6.1.png',
+                    backTxt: ('Мені легко дається складання бюджету та розпорядження грошима'),
                     connectionID: 5
                 },
                 {
-                    backTxt: './Assets/5.png',
+                    backTxt: ('Мені легко придумувати історії'),
                     connectionID: 6
                 },
                 {
-                    backTxt: './Assets/5.1.png',
+                    backTxt: ('Я завжди добре володів своїм тілом'),
                     connectionID: 7
                 },
                 {
-                    backTxt: './Assets/3.png',
+                    backTxt: ('Коли я слухаю людини, я зазвичай прислухаюся не тільки до суті того, що він каже, а й до його словами'),
                     connectionID: 8
                 },
                 {
-                    backTxt: './Assets/2.png',
+                    backTxt: ('Мені подобаються кросворди, завдання та загадки зі словами'),
                     connectionID: 9
                 },
                 {
-                    backTxt: './Assets/1.1.png', 
+                    backTxt: ('Я не люблю неясності, я люблю ясність'), 
                     connectionID: 10
                 },
                 {
-                    backTxt: './Assets/4.png',
+                    backTxt: ('Мені подобаються логічні завдання, такі як судоку'),
                     connectionID: 11
                 },
                 {
-                    backTxt: './Assets/8.1.png',
+                    backTxt: ('Мені подобається міркувати'),
                     connectionID: 12
                 },
                 {
-                    backTxt: './Assets/8.png',
+                    backTxt: ('Для мене дуже важлива музика'),
                     connectionID: 13
                 },
                 {
-                    backTxt: './Assets/7.1.png',
+                    backTxt: ('Я брешу дуже переконливо'),
                     connectionID: 14
                 },
                 {
-                    backTxt: './Assets/2.1.png',
+                    backTxt: ('Я займаюся спортом / танцюю'),
                     connectionID: 15
                 },
                 {
-                    backTxt: './Assets/1.png',
+                    backTxt: ('Мене цікавить психометрики (тести на визначення характеристик особистості) і IQ тести'),
                     connectionID: 16
                 },
                 {

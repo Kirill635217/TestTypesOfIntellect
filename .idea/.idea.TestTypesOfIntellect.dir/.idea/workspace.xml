@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f425c073-de86-4146-ab4a-31a8b9b40e86" name="Default Changelist" comment="Добавил шапку">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/indexLayout.xml" afterDir="false" />
+    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
