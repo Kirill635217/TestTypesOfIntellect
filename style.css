@@ -32,6 +32,45 @@ p.desc {
   margin-bottom: 60px;
 }
 
+
+h3 
+{
+  margin-top: 20px;
+  color: white;
+}
+
+.info-1_b, .info-2_b, .info-3_b 
+{
+  color: white;
+}
+
+.info-1
+{
+  margin-top: 20px;
+  background-color: gray;
+  border-radius: 5%;
+  width: 350px;
+  height: 150px;
+}
+
+.info-2
+{
+  margin-top: 20px;
+  background-color: gray;
+  border-radius: 5%;
+  width: 350px;
+  height: 150px;
+}
+
+.info-3
+{
+  margin-top: 20px;
+  background-color: gray;
+  border-radius: 5%;
+  width: 350px;
+  height: 150px;
+}
+
 /* Cards */
 .cards-container {
   display: block;
@@ -120,6 +159,7 @@ p.desc {
   margin-top: 10px;
 }
 
+
 /* Timer */
 .timer {
   display: none;
@@ -141,34 +181,75 @@ p.desc {
 /* Buttons */
 #btn-1 
 {
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
+  margin-top: 10px;
   margin-bottom: 50px;
 }
 
 .button-1 
 {
   background-color:#FF5E5B;
-
+  width: 65px;
+  height: 65px;
 }
 
 .button-2 
 {
   background-color: #00CECB;
-  margin-left: 10px;
+  margin-left: 15px;
+  width: 55px;
+  height: 55px;
 }
 
 .button-3 
 {
   background-color: #FAC901;
-  margin-left: 10px;
+  margin-left: 15px;
+  width: 55px;
+  height: 55px;
 }
 
 .button-4
 {
   background-color:lawngreen;
-  margin-left: 10px;
+  margin-left: 15px;
+  width: 65px;
+  height: 65px;
+}
+
+.btn-NI-1 
+{
+  background-color:#f5a9a8;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.btn-NI-2 
+{
+  background-color:#a2e7e6;
+  margin-left: 15px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.btn-NI-3 
+{
+  background-color:#f3dd83;
+  margin-left: 15px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.btn-NI-4 
+{
+  background-color: rgb(201, 252, 151);
+  margin-left: 15px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
 }
 
 .btn {
@@ -257,6 +338,17 @@ p.desc {
   .flip-container, .front, .back {
     width: 100%;
     height: 120px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .flip-container, .front, .back {
+    width: 100%;
+    height: 120px;
+  }
+  .questionText 
+  {
+    font-size: xx-large;
   }
 }
 
