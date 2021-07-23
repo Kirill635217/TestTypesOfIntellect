@@ -10,9 +10,9 @@ var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
 
 function sendEmail() {       console.log("mail");
     Email.send({
-      Host: "smtp.gmail.com",
+      Host: "smtp.elasticemail.com",
       Username: "thega.connorr@gmail.com",
-      Password: "landmarker587",
+      Password: "855193F15B1A23F9B3D5F12F49C2259575B3",
       To: 'kirill.developer49@gmail.com',
       From: "thega.connorr@gmail.com",
       Subject: "Sending Email using javascript",
