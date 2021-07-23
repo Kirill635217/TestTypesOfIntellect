@@ -15,12 +15,17 @@ function sendEmail() {       console.log("mail");
       Password: "855193F15B1A23F9B3D5F12F49C2259575B3",
       To: 'kirill.developer49@gmail.com',
       From: "thega.connorr@gmail.com",
-      Subject: "Sending Email using javascript",
-      Body: "Well that was easy!!",
+      Subject: "Тест на визначення типу інтелекта",
+      Body: "Лінгвістичний: " + typesOfintelligence[0] + ". Логіко-математичний: " + typesOfintelligence[1] + ". Музичний: " + typesOfintelligence[2] + ". Кінестетичний: " + typesOfintelligence[3] + ". Візуально-просторовий: " + typesOfintelligence[4] + ". Міжособистістний: " + typesOfintelligence[5] + ". Внутрішньоособистістний: " + typesOfintelligence[6] + ". Природничий: " + typesOfintelligence[7],
     })
       .then(function (message) {
-        alert("mail sent unsuccessfully")
+        console.log("mail sent unsuccessfully");
       });
+  }
+
+  function endTest(){
+      console.log("endtest");
+        sendEmail();
   }
 
 BRAINYMO.Game = (function() {
@@ -226,6 +231,7 @@ function clicked(button, points){
         buttonsInteractable[index].classList.toggle('hideShow');
         buttonsInteractable[index+1].classList.toggle('hideShow');
     }else{
+        if(index+1 + questionRoundsCompleted * 10 < generatedCardsBrain.length){
         var child = buttonsContainer[0].firstElementChild;
         child.scrollIntoView({
             behavior: 'auto',
@@ -236,6 +242,9 @@ function clicked(button, points){
         buttonsInteractable[0].classList.toggle('hideShow');
         questionRoundsCompleted++;
         nextQuestionRound();
+    }else{
+        buttonsInteractable[index].classList.toggle('hideShow');
+    }
     }
     console.log(generatedCards[generatedCards.length-1] + " " + generatedCards.length);
     typesOfintelligence[generatedCardsBrain[index].connectionID] += points;
@@ -243,6 +252,9 @@ function clicked(button, points){
         console.log(typesOfintelligence[i]);
     }
     console.log(typesOfintelligence[generatedCardsBrain[index].connectionID] + " " + points + " " + generatedCardsBrain[index].connectionID);
+    if(index+1 + questionRoundsCompleted*10 === generatedCardsBrain.length){
+        endTest();
+    }
 }
 
 function nextQuestionRound(){
