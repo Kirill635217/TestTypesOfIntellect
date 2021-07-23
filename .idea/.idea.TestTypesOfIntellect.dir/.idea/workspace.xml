@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestTypesOfIntellect.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="29fb90b3-0062-448e-90c6-e1f48e3045b0" name="Default Changelist" comment="Исправил баги связаные с размером экрана" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +42,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626962112717</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added fake buttons, now you can only answer the question you're on. Added image to card (for scrollin)">
+      <created>1627034055409</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1627034055409</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +149,7 @@
     <MESSAGE value="ss" />
     <MESSAGE value="add main page index and style" />
     <MESSAGE value="Добавил шапку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил шапку" />
+    <MESSAGE value="Added fake buttons, now you can only answer the question you're on. Added image to card (for scrollin)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fake buttons, now you can only answer the question you're on. Added image to card (for scrollin)" />
   </component>
 </project>
