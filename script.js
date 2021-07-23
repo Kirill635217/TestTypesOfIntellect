@@ -168,7 +168,7 @@ BRAINYMO.Game = (function() {
                 console.log(generatedCards[i]);
             }
             buttons = document.getElementsByClassName("buttonContainer");
-            // generatedQuestionsTexts = document.getElementsByClassName("questionText");
+            generatedQuestionsTexts = document.getElementsByClassName("questionText");
             // var j = 0;
             // buttons[0].onclick = function(){
             //     console.log("here");
@@ -177,10 +177,12 @@ BRAINYMO.Game = (function() {
             //         console.log("clicked " + buttons[j] + " " + j);}
             //         j++;
             // }
+            for (var i = 0, len = generatedQuestionsTexts.length; i < len; i++) {
+                generatedQuestionsTexts[i].innerHTML = generatedCardsBrain[i].backTxt;
+            }
             for (var i = 0, len = buttons.length; i < len; i++) {
                 buttons[i].id = "btnContainer" + i;
-                // generatedQuestionsTexts[i].textContent === generatedCardsBrain[i].backTxt;
-                console.log(buttons[i]);
+                console.log(generatedQuestionsTexts[i]);
                 // buttons[i].onclick = clicked(i);
                     // if(i == 0)
                     // {
@@ -237,8 +239,8 @@ function clicked(button, points){
 
 function nextQuestionRound(){
     if(questionRoundsCompleted * 10 < generatedCardsBrain.length){
-        for (var i = questionRoundsCompleted * 10 + 1, len = questionRoundsCompleted * 10 + 10; i < len; i++) {
-            prepareCardTemplate(generatedCardsBrain[i]);
+        for (var i = 0, len = generatedQuestionsTexts.length; i < len; i++) {
+            generatedQuestionsTexts[i].innerHTML = generatedCardsBrain[i + questionRoundsCompleted*10].backTxt;
         }
     }
 }
@@ -280,7 +282,7 @@ BRAINYMO.Card = (function () {
         // Else if card has no background image but has text
         else if (card.backTxt != '' && card.backTxt != undefined) {
             console.log("wygwtfxuguxa");    
-            template.find('.front > .textContainer > label').html(card.backTxt);
+            template.find('.front  > label').html(card.backTxt);
         }
         console.log(card.backTxt);
 
