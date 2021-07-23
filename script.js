@@ -2,7 +2,8 @@ var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
 var generatedCardsBrain;
 var generatedQuestionsTexts;
-var buttons;
+var buttonsContainer;
+var buttonsInteractable;
 var questionRoundsCompleted = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
 var typesOfintelligence = new Array(0, 0, 0, 0, 0, 0, 0, 0);
@@ -167,7 +168,8 @@ BRAINYMO.Game = (function() {
                 generatedCards[i] = cards[i];
                 console.log(generatedCards[i]);
             }
-            buttons = document.getElementsByClassName("buttonContainer");
+            buttonsContainer = document.getElementsByClassName("buttonContainer");
+            buttonsInteractable = document.getElementsByClassName("buttonsInteractable");
             generatedQuestionsTexts = document.getElementsByClassName("questionText");
             // var j = 0;
             // buttons[0].onclick = function(){
@@ -180,8 +182,10 @@ BRAINYMO.Game = (function() {
             for (var i = 0, len = generatedQuestionsTexts.length; i < len; i++) {
                 generatedQuestionsTexts[i].innerHTML = generatedCardsBrain[i].backTxt;
             }
-            for (var i = 0, len = buttons.length; i < len; i++) {
-                buttons[i].id = "btnContainer" + i;
+            for (var i = 0, len = buttonsContainer.length; i < len; i++) {
+                buttonsContainer[i].id = "btnContainer" + i;
+                if(i > 0)
+                    buttonsInteractable[i].classList.toggle('hideShow');
                 console.log(generatedQuestionsTexts[i]);
                 // buttons[i].onclick = clicked(i);
                     // if(i == 0)
@@ -208,24 +212,28 @@ BRAINYMO.Game = (function() {
 
 function clicked(button, points){
     console.log(button);
-    console.log(buttons[1]);
+    console.log(buttonsContainer[1]);
     let str = button.id;
     var index = parseInt(str.replace("btnContainer", ""), 10);    
     console.log(index);
-    if(index+1 < buttons.length){
-        var child = buttons[index+1].firstElementChild;
+    if(index+1 < buttonsContainer.length){
+        var child = buttonsContainer[index+1].firstElementChild;
         child.scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
+        buttonsInteractable[index].classList.toggle('hideShow');
+        buttonsInteractable[index+1].classList.toggle('hideShow');
     }else{
-        var child = buttons[0].firstElementChild;
+        var child = buttonsContainer[0].firstElementChild;
         child.scrollIntoView({
             behavior: 'auto',
             block: 'center',
             inline: 'center'
         });
+        buttonsInteractable[index].classList.toggle('hideShow');
+        buttonsInteractable[0].classList.toggle('hideShow');
         questionRoundsCompleted++;
         nextQuestionRound();
     }
@@ -477,19 +485,19 @@ $(function() {
                 },
                 {
                     backTxt: ('Коли я слухаю людини, я зазвичай прислухаюся не тільки до суті того, що він каже, а й до його словами'),
-                    connectionID: 8
+                    connectionID: 7
                 },
                 {
                     backTxt: ('Мені подобаються кросворди, завдання та загадки зі словами'),
-                    connectionID: 9
+                    connectionID: 7
                 },
                 {
                     backTxt: ('Я не люблю неясності, я люблю ясність'), 
-                    connectionID: 10
+                    connectionID: 7
                 },
                 {
                     backTxt: ('Мені подобаються логічні завдання, такі як судоку'),
-                    connectionID: 11
+                    connectionID: 7
                 },
                 {
                     backTxt: ('Мені подобається міркувати'),

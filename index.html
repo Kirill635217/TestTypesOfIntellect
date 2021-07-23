@@ -39,10 +39,19 @@
                             <label class="questionText"></label>
                         </div>
                         <div class="buttonContainer" id="btnContainer">
-                        <button onclick="clicked(this.parentElement, 1)" id="btn-1" class="button-1">1</button>
-                        <button onclick="clicked(this.parentElement, 2)" id="btn-1" class="button-2">2</button>
-                        <button onclick="clicked(this.parentElement, 3)" id="btn-1" class="button-3">3</button>
-                        <button onclick="clicked(this.parentElement, 4)" id="btn-1" class="button-4">4</button>
+                            <img src="..." class="rounded float-end" alt="...">
+                            <div class="buttonsInteractable">
+                                <button onclick="clicked(this.parentElement.parentElement, 1)" id="btn-1" class="button-1">1</button>
+                                <button onclick="clicked(this.parentElement.parentElement, 2)" id="btn-1" class="button-2">2</button>
+                                <button onclick="clicked(this.parentElement.parentElement, 3)" id="btn-1" class="button-3">3</button>
+                                <button onclick="clicked(this.parentElement.parentElement, 4)" id="btn-1" class="button-4">4</button>
+                            </div>
+                            <div class="buttonsNotInteractable">
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button>4</button>
+                            </div>
                     </div>
                 </div>
             </div>
