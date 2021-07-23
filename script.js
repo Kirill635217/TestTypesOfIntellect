@@ -1,6 +1,7 @@
 var BRAINYMO = BRAINYMO || {};
 var generatedCards = new Array(16);
 var generatedCardsBrain;
+var generatedQuestionsTexts;
 var buttons;
 var clickedTimes = 0;
 // 0 - лінгвістичний, 1 - логіко-мат, 2 - музичний, 3 - кінстч, 4 - візуаль, 5 - міжособ, 6 - внутршн, 7 - природний 
@@ -166,6 +167,7 @@ BRAINYMO.Game = (function() {
                 console.log(generatedCards[i]);
             }
             buttons = document.getElementsByClassName("buttonContainer");
+            // generatedQuestionsTexts = document.getElementsByClassName("questionText");
             // var j = 0;
             // buttons[0].onclick = function(){
             //     console.log("here");
@@ -176,6 +178,7 @@ BRAINYMO.Game = (function() {
             // }
             for (var i = 0, len = buttons.length; i < len; i++) {
                 buttons[i].id = "btnContainer" + i;
+                // generatedQuestionsTexts[i].textContent === generatedCardsBrain[i].backTxt;
                 console.log(buttons[i]);
                 // buttons[i].onclick = clicked(i);
                     // if(i == 0)
@@ -266,8 +269,9 @@ BRAINYMO.Card = (function () {
         // Else if card has no background image but has text
         else if (card.backTxt != '' && card.backTxt != undefined) {
             console.log("wygwtfxuguxa");    
-            template.find('.front > label').html(card.backTxt);
+            template.find('.front > .textContainer > label').html(card.backTxt);
         }
+        console.log(card.backTxt);
 
         return template;
     }
